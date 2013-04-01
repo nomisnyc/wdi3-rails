@@ -1,0 +1,23 @@
+<ul>
+      <li><%= link_to('Add New Recipe', new_recipe_path) %></li>
+    </ul>
+</nav>
+<p>
+<ol>
+<% @recipes.each do |recipe| %>
+<li>
+  <ul>
+    <li><%= link_to(recipe.name, recipe) %> </li>
+    <li><%= recipe.course %> </li>
+    <li><%= recipe.cooktime %> </li>
+    <li><%= recipe.servingsize %> </li>
+  </li><%= link_to 'Delete', recipe, :method => :delete %>
+  <%= link_to 'Edit', edit_recipe_path(recipe) %>
+  </li>
+    <li><%= image_tag(recipe.image, :class =>'recipeimg') %> </li>
+  </ul>
+</li>
+</p>
+<% end %>
+
+</ol>

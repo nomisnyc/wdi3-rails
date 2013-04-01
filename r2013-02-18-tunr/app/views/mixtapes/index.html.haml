@@ -1,0 +1,7 @@
+= link_to('Add New Mixtape List', new_song_path, :class => 'button') if is_admin
+
+%table
+  -@mixtapes.each do |mixtape|
+    %tr
+      %td= link_to(mixtape.name, mixtape_path(mistape))
+      %td= link_to('Edit', edit_mixtape_path(song), :method => 'get', :class => 'button')if is_admin

@@ -1,0 +1,13 @@
+#users
+
+  %table
+    - @users.each do |user|
+      %tr
+        %td
+          -if user.is_admin
+            %span.label.alert.status= user.name
+          -else
+            %span.label.success.radius= user.name
+        %td= image_tag(user.image)
+        %td= number_to_currency(user.balance)
+        %td= link_to('delete', user, :method => 'delete', :class => 'button') if user != @auth

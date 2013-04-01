@@ -1,0 +1,24 @@
+<ul>
+      <li><%= link_to('Add New Ingredient', new_ingredient_path) %></li>
+    </ul>
+</nav>
+<p>
+
+<ol>
+<% @ingredients.each do |ingredient| %>
+<li>
+  <ul>
+    <li><%= link_to(ingredient.name, ingredient) %> </li>
+
+    <li><%= ingredient.measurement %> </li>
+    <li><%= ingredient.cost %> </li>
+     </li><%= link_to 'Delete', ingredient, :method => :delete %>
+  <%= link_to 'Edit', edit_ingredient_path(ingredient) %>
+  </li>
+    <li><%= image_tag(ingredient.image, :class =>'ingredientimg') %> </li>
+  </ul>
+</li>
+</p>
+<% end %>
+
+</ol>

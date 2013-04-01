@@ -1,0 +1,10 @@
+.row
+  .four.columns
+    = render(:partial => 'shared/errors', :locals => {:object => @song})
+    = form_for @song do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      = f.label :filename
+      = f.text_field :filename
+      = f.submit
+  .eight.columns

@@ -1,0 +1,11 @@
+#show
+
+%h1= @song.name
+%p= @song.album.name if @song.album.present?
+%table
+- @song.genres.each do |genre|
+  %tr
+    %td= genre.name
+%table
+  %tr
+    %td= audio_tag(@song.filename, :controls => true)

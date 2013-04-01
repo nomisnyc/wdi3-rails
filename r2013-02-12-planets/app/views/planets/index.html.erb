@@ -1,0 +1,18 @@
+planets wooot
+
+
+  <% @planets.each do |planet|%>
+
+    <p>
+      <%= link_to(planet.name, planet_path(planet.id)) %> has <%= pluralize(planet.moons, 'moon') %>
+    <!--  <%= planet.orbit %>
+    <%= planet.mass %>
+    <%= planet.diameter %> -->
+    <br/>
+    <%= button_to 'Delete', planet_delete_path(planet.id) %>
+    <%= link_to 'Edit', planet_edit_path(planet.id) %>
+    </p>
+
+  <% end %>
+
+

@@ -1,0 +1,10 @@
+#users
+= link_to('Add New Album', new_album_path, :class => 'button') if is_admin
+%table
+  -@albums.each do |album|
+    %tr
+      %td= link_to(album.name, album_path(album))
+      %td= image_tag album.image
+      %td= link_to('Edit', edit_album_path(album), :method => 'get', :class => 'button')if is_admin
+
+

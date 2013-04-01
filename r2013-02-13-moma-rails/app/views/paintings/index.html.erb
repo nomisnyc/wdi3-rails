@@ -1,0 +1,13 @@
+index painting
+
+<% @paintings.each do |painting| %>
+  <li>
+    <ul> <%= painting.title %> </ul>
+    <ul> <%= painting.year %> </ul>
+    <ul> <%= painting.medium %> </ul>
+    <ul> <%= painting.style %> </ul>
+    <ul> <%= image_tag(painting.image) %> </ul>
+  </li><%= link_to 'Delete', painting, :method => :delete %>
+  <%= link_to 'Edit', edit_painting_path(painting) %>
+  </li>
+<% end %>

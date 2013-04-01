@@ -1,0 +1,18 @@
+.row
+  .ten.columns
+
+    = render(:partial => 'shared/errors', :locals => {:object => @genre})
+
+    %table
+      %tr
+        %td= 'There are'
+        %td= @genre.songs.count
+        %td= 'songs for'
+        %td= @genre.name
+
+        - @genre.songs.each do |song|
+          %td= link_to(song.name, song_path(song))
+
+  .twelve.columns
+
+

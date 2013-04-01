@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="one columns">
+    <h1><img src="http://images.all-free-download.com/images/graphicmedium/music_enthusiasts_silhouette_vector_149655.jpg" /></h1>
+  </div>
+  <div class="eleven columns">
+    <ul class="nav-bar right">
+      <li><%= link_to('Home', root_path)%></li>
+      <li class="has-flyout"></li>
+      <% if @auth %>
+       <a href="#">Mixtape</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <%= @auth.mixtapes.each do |mixtape| %>
+     <li> <%= link_to(mixtape.name, mixtape) %></li>
+      <% end %>
+      <li> <%= link_to('New Mixtape', new_mixtape_path) %> </li>
+      <% end %>
+    </ul>
+  <li class="has-flyout">
+    <a href="#">Browse Music</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><%= link_to('Genres', genres_path)%></li>
+      <li><%= link_to('Albums', albums_path)%></li>
+      <li><%= link_to('Artists', artists_path)%></li>
+      <li><%= link_to('Songs', songs_path)%></li>
+    </ul>
+  </li>
+        <%== intellinav %>
+    </ul>
+  </div>
+</div>
+

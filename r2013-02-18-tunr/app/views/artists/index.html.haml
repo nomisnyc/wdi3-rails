@@ -1,0 +1,9 @@
+#users
+
+= link_to('Add New Artist', new_artist_path, :class => 'button') if is_admin
+%table
+  -@artists.each do |artist|
+    %tr
+      %td= link_to(artist.name, artist_path(artist))
+      %td= image_tag artist.image
+      %td= link_to('Edit', edit_artist_path(artist), :method => 'get', :class => 'button')if is_admin

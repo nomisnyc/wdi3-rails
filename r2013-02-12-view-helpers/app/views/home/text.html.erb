@@ -1,0 +1,20 @@
+text
+
+there are <%= pluarlize(@person_count1, 'person') %> sign up
+
+there are <%= pluarlize(@person_count2, 'person') %> sign up
+
+
+
+<%= truncate(@story, :length => 20) %>
+
+
+
+<ul>
+<% @numbers.each do |num| %>
+
+  <li style='background-color:<%= cycle('orange', 'green', 'blue', 'grey') %>;'><%= num %></li>
+
+  <% end %>
+
+</ul>

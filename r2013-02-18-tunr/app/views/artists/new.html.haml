@@ -1,0 +1,13 @@
+.row
+  .four.columns
+
+    = render(:partial => 'shared/errors', :locals => {:object => @artist})
+
+    = form_for @artist do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      - @artist.songs.each do |song|
+        = check_box_tag 'artist[song_ids][]', song.id, song.in?(@artist.songs.to_a)
+        = song.name
+      = f.submit nil, :class => 'button radius'
+  .eight.columns

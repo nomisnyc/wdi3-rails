@@ -1,0 +1,53 @@
+
+nav
+{
+position: top;
+
+}
+
+h1
+{font-size: 50px;
+
+  color: #413630;
+}
+
+
+li
+{
+
+  color: orange;
+  font-size: 20px;
+  list-style: none;
+  float: left;
+  border-radius: 40px;
+  text-decoration: dash;
+  border: 2px double orange;
+  background-color: grey;
+}
+
+#container
+{
+    width: 800px;
+    margin: 0 auto;
+    background-color: purple;
+    height: 30px;
+}
+
+body
+{
+ float: left;
+  padding: 20px;
+  width: 500px;
+  background-image: url(assets/starring.png);
+  background-color: pink;
+  font: red;
+}
+
+<!--#sidebar
+{
+  width: 280px;
+  float: right;
+  background: #FFF;
+  margin-left: 20px;
+  padding: 27px;
+}-->

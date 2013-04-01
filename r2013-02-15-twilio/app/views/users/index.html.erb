@@ -1,0 +1,20 @@
+
+<form method='post' action='/users/sendtxt'>
+
+   <li><input type='text' name='<%= number %>'></li>
+    <li><input type='text' name='body'></li>
+    <li><button>send text</button></li>
+  </form>
+
+
+
+<% @users.each do |user| %>
+  <form method='post' action='/users/sendtxt'>
+    <li><%= user.name %></li>
+    <input type='hidden' name='first' value='<%= user.name %>'>
+    <li><input type='text' name='body'></li>
+    <li><button>send text</button></li>
+  </form>
+<% end %>
+
+

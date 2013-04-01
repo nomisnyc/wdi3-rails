@@ -1,0 +1,24 @@
+
+
+    <ul>
+      <li><%= link_to('Add a New Book', new_book_path) %></li>
+    </ul>
+</nav>
+<p>
+<ol>
+<% @books.each do |book| %>
+<li>
+  <ul>
+    <li><%= link_to(book.title, book) %> </li>
+    <li><%= book.cuisine %> </li>
+    <li><%= book.chef %> </li>
+    </li><%= link_to 'Delete', book, :method => :delete %>
+  <%= link_to 'Edit', edit_book_path(book) %>
+  </li>
+    <li><%= image_tag book.image, :class =>'bookimg' %> </li>
+  </ul>
+</li>
+</p>
+<% end %>
+
+</ol>

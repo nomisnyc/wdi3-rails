@@ -1,0 +1,24 @@
+<%= form_for @book do |f| %>
+
+  <br>
+<%= f.text_field :title, :placeholder => "Title" %>
+<%= f.label :title,:autofocus => 'autofocus' %>
+<br>
+<%= f.text_field :cuisine, :placeholder => "Cuisine" %>
+<%= f.label :cuisine %>
+<br>
+<%= f.text_field :chef, :placeholder => "Chef" %>
+<%= f.label :chef %>
+<br>
+<%= f.text_field :image, :placeholder => "Image" %>
+<%= f.label :image %>
+<br>
+<% Recipe.order(:name).each do |recipe| %>
+  <span><%= recipe.name %></span>
+  <%= check_box_tag 'book[recipe_ids][]', recipe.id, recipe.in?(@book.recipes.to_a) %>
+  <% end %>
+
+
+<%= f.submit %>
+
+<% end %>

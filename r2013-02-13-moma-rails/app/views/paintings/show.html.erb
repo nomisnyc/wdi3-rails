@@ -1,0 +1,10 @@
+paintings show
+
+<li>
+    <ul> <%= @painting.title %> </ul>
+    <ul> <%= @painting.year %> </ul>
+    <ul> <%= @painting.medium %> </ul>
+    <ul> <%= @painting.style %> </ul>
+    <ul> <%= image_tag(@painting.image) %> </ul>
+  </li><%= link_to 'Delete', @painting, :method => :delete %>
+  </li>

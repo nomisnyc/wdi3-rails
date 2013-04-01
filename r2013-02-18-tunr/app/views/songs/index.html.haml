@@ -1,0 +1,7 @@
+#users
+= link_to('Add New Song', new_song_path, :class => 'button') if is_admin
+%table
+  -@songs.each do |song|
+    %tr
+      %td= link_to(song.name, song_path(song))
+      %td= link_to('Edit', edit_song_path(song), :method => 'get', :class => 'button')if is_admin

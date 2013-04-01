@@ -1,0 +1,7 @@
+.row
+  .five.columns
+= render(:partial => 'shared/errors', :locals => {:object => @mixtapes})
+= link_to('Add New Mixtape List', new_song_path, :class => 'button') if is_admin
+
+  %p 'Mixtapes'
+

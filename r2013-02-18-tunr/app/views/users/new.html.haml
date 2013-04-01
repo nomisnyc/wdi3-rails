@@ -1,0 +1,41 @@
+.row
+  .four.columns
+    - if @user.errors.any?
+      %ol
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+    = form_for @user do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      = f.label :image
+      = f.text_field :image
+      = f.label :balance
+      = f.text_field :balance
+      = f.label :password
+      = f.password_field :password
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+      = f.submit
+      .nine.columns
+
+
+
+
+/ - numbers =(0..10).to_a
+/ - numbers.each do |number|
+/   %h6= number
+
+/ %input{:type => 'text'}
+/ %h1 hello world
+
+/ %p this is a p tag
+/ %span= 3**9
+/ %div
+/   %h2 this is h2
+/   %h3 this is h3
+/   %p
+/   %span span1
+/   %span span2
+
+/ .awesome#cool this is both awesome and cool

@@ -1,0 +1,17 @@
+index authors
+
+
+
+<% @authors.each do |author| %>
+    <ul>
+      <li> Name: <%= link_to author.name, author %> </li>
+      <li> Nationality: <%= author.nationality %> </li>
+      <li> D.O.B.: <%= author.dob %> </li>
+      <li> Period: <%= author.genre %> </li>
+      <li> <%= image_tag(author.image) %> </li><%= link_to 'Delete', author, :method => :delete %>
+      <%= link_to 'Edit', edit_author_path(author) %>
+    </ul>
+<% end %>
+
+
+

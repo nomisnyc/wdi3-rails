@@ -1,0 +1,15 @@
+Artists
+<% @artists.each do |artist| %>
+  <div class="artistbox">
+    <ul>
+      <li> Name: <%= link_to artist.name, artist %> </li>
+      <li> Nationality: <%= artist.nationality %> </li>
+      <li> D.O.B.: <%= artist.dob %> </li>
+      <li> Period: <%= artist.period %> </li>
+      <li> <%= image_tag(artist.image) %> </li><%= link_to 'Delete', artist, :method => :delete %>
+      <%= link_to 'Edit', edit_artist_path(artist) %>
+    </ul>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,16 @@
+*{
+  margin: 8px;
+  padding: 1px;
+
+}
+
+img
+{
+  width: 150px;
+  height: 150px;
+  border: 3px dotted grey;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: blue;
+
+}

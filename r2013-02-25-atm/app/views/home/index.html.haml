@@ -1,0 +1,20 @@
+%h1 WDI Bank
+#body
+  .container
+    #checkaccount
+      %h2 Checking Account
+      %span.ckbalance
+      %br
+      = text_field_tag('ckamount')
+      %br
+      = submit_tag 'Withdraw', :id => 'ckbtnwith'
+      = submit_tag 'Deposit', :id => 'ckbtndep'
+    #saveaccount
+      %h2 Saving Account
+      %span.svbalance
+        250.00
+      %br
+      = text_field_tag('svamount')
+      %br
+      = submit_tag 'Withdraw', :id => 'svbtnwith'
+      = submit_tag 'Deposit', :id => 'svbtndep'

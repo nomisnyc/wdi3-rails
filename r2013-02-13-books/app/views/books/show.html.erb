@@ -1,0 +1,10 @@
+show books
+
+<li>
+    <ul> <%= @book.title %> </ul>
+    <ul> <%= @book.year %> </ul>
+    <ul> <%= @book.publisher %> </ul>
+    <ul> <%= @book.genre %> </ul>
+    <ul> <%= image_tag(@book.image) %> </ul>
+  </li><%= link_to 'Delete', @book, :method => :delete %>
+  </li>

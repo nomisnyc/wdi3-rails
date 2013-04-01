@@ -1,0 +1,36 @@
+h1
+{
+  text-align: center;
+}
+
+h2
+{
+  color: #ffcc00;
+}
+
+body
+{
+  background:url('/images/kindajean.png');
+  background: repeat;
+}
+{
+  float: right;
+}
+
+.container
+{
+  width: 700px;
+  margin: 0 auto;
+}
+
+#saveaccount
+{
+  float: right;
+  margin: 0 20px;
+}
+
+#checkaccount
+{
+  float: left;
+  margin: 0 20px;
+}

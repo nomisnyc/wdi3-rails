@@ -1,0 +1,23 @@
+artists show
+
+ <ul>
+      <li> <%= link_to @artist.name, @artist %> </li>
+      <li> <%= @artist.nationality %> </li>
+      <li> <%= @artist.dob %> </li>
+      <li> <%= @artist.period %> </li>
+      <li> <%= image_tag(@artist.image) %> </li>
+    </ul>
+
+
+    <% @artist.paintings.each do |painting| %>
+
+  <ul> <%= link_to painting.title, painting %> </ul>
+    <ul> <%= painting.year %> </ul>
+    <ul> <%= painting.medium %> </ul>
+    <ul> <%= painting.style %> </ul>
+    <ul> <%= image_tag(painting.image) %> </ul>
+
+
+    <% end %>
+
+    <%= link_to 'Delete', @artist, :method => :delete %>

@@ -1,0 +1,25 @@
+
+<p>
+  <br>
+<%= link_to(@book.title, @book) %>
+<br>
+<%= @book.cuisine %>
+<br>
+<%= @book.chef %>
+<br>
+<%= image_tag(@book.image) %>
+
+
+<% @book.recipes.each do |recipe| %>
+  <% recipe.name %>
+  <% image_tag(recipe.image) %>
+
+  <br>
+
+  <% recipe.ingredients.each do |ingredient| %>
+    <%= ingredient.name %>
+    <%= image_tag ingredient.image, :height => '350px', :width => '350px' %>
+  </p>
+    <% end %>
+
+  <% end %>

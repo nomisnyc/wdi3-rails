@@ -1,0 +1,14 @@
+.row
+  .five.columns
+    = render(:partial => 'shared/errors', :locals => {:object => @album})
+
+    = form_for @album do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      = f.label :image
+      = f.text_field :image
+      - Song.all.each do |song|
+        = check_box_tag 'album[song_ids][]', song.id, song.in?(@album.songs.to_a)
+        = song.name
+      = f.submit
+  .seven.columns

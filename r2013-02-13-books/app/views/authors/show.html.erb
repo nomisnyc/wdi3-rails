@@ -1,0 +1,24 @@
+show authors
+
+
+<ul>
+  <li> <%= link_to @author.name, @author %> </li>
+  <li> <%= @author.nationality %> </li>
+  <li> <%= @author.dob %> </li>
+  <li> <%= @author.genre %> </li>
+  <li> <%= image_tag(@author.image) %> </li>
+</ul>
+
+
+    <% @author.books.each do |book| %>
+
+<ul> <%= link_to book.title, book %> </ul>
+    <ul> <%= book.year %> </ul>
+    <ul> <%= book.genre %> </ul>
+    <ul> <%= book.publisher %> </ul>
+    <ul> <%= image_tag(book.image) %> </ul>
+
+
+    <% end %>
+
+  <%= link_to 'Delete', @author, :method => :delete %>

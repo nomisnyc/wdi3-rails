@@ -1,0 +1,8 @@
+.row
+  .four.columns
+    = render(:partial => 'shared/errors', :locals => {:object => @genre})
+    = form_for @genre do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      = f.submit
+  .eight.columns

@@ -1,0 +1,21 @@
+<%= form_for @recipe do |f| %>
+
+  <br>
+<%= f.text_field :name, :placeholder => "Name" %>
+<%= f.label :name,:autofocus => 'autofocus' %>
+<br>
+<%= f.text_field :course, :placeholder => "Course" %>
+<%= f.label :course %>
+<br>
+<%= f.text_field :cooktime, :placeholder => "Cooktime" %>
+<%= f.label :cooktime %>
+<br>
+<%= f.text_field :servingsize, :placeholder => "Servingsize" %>
+<%= f.label :servingsize %>
+<br>
+<%= f.text_field :image, :placeholder => "Image" %>
+<%= f.label :image %>
+<br>
+<%= f.submit %>
+
+<% end %>

@@ -1,0 +1,12 @@
+.row
+  .four.columns
+    = render(:partial => 'shared/errors', :locals => {:object => @artist})
+    - @artist.albums.map(&:songs).each do |song|
+      %h2= link_to(song.name, song_path(song))
+    %table
+      %tr
+        %td= @artist.albums.count
+        %td= @artist.name
+        - @artist.songs.each do |song|
+          %td= link_to(song.name, song_path(song))
+  .eight.columns
